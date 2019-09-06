@@ -4,7 +4,7 @@ class Spree::GraphQL::Schema::Types::Image < Spree::GraphQL::Schema::Types::Base
   graphql_name 'Image'
 
   def self.url_field_default_value
-    default_style_value = Spree::Image.attachment_definitions.dig :attachment, :default_style
+    default_style_value = Spree::Image.styles[:original]
 
     if !default_style_value || Spree::GraphQL::Schema::Types::ImageStyle.values.none? do |_, enum_value|
          enum_value.value == default_style_value
