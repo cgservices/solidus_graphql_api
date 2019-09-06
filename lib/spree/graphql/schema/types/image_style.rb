@@ -8,7 +8,7 @@ class Spree::GraphQL::Schema::Types::ImageStyle < Spree::GraphQL::Schema::Types:
   cropping methods and other post-processing effects.'
 
   def self.image_styles
-    Spree::Image.attachment_definitions[:attachment][:styles].keys
+    Spree::Image.styles.keys + [:original]
   end
 
   image_styles.sort.each do |style|
