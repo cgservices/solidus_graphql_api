@@ -5,7 +5,6 @@ require 'ostruct'
 
 class Spree::GraphQL::Schema < ::GraphQL::Schema
   query ::Spree::GraphQL::Schema::Types::QueryRoot
-  mutation ::Spree::GraphQL::Schema::Types::Mutation
 
   Spree::GraphQL::LazyResolver.activate(self)
 
