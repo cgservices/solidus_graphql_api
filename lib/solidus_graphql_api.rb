@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'graphql'
-require 'solidus_core'
+require 'spree_core'
 
 module SolidusGraphqlApi; end
 
